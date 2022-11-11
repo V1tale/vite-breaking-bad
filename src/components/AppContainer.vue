@@ -19,9 +19,6 @@ export default {
         <h1>Breaking Bad API</h1>        
     </div>
     <div class="container">
-            <select name="categories" id="categories">
-                <option value="">Select Category</option>
-            </select>
         <div class="wrapper">
             <AppCards />
         </div>

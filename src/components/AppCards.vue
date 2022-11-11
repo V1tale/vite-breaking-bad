@@ -6,6 +6,7 @@ export default {
     data() {
         return {
             characters:[],
+            category: ["Breaking bad", "Better Call Saul"],
         }
     },
     created() {
@@ -18,6 +19,10 @@ export default {
 </script>
 
 <template>
+    <select name="categories" id="categories">
+    <option value="">Select Category</option>
+    <option v-for="(series, index) in category" @change="filter()" value="Option">{{series}}</option>
+</select>
     <div class="found">
         <h2>Trovati {{characters.length}} personaggi</h2>
     </div>
