@@ -36,6 +36,8 @@ img {
 .title {
     display: flex;
     align-items: center;
+    background-color: gray;
+    padding-left: 1rem;
     h1 {
         margin-left: 1rem;
         color:white;
@@ -43,7 +45,6 @@ img {
 }
 .wrapper {
     width:100%;
-    height: 500px;
     background-color:white;
 }
 </style>
