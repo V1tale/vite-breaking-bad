@@ -1,17 +1,26 @@
 <script>
+import axios from "axios" 
+import {reactive} from "vue";
 export default {
     name: "AppCards",
     data() {
-        return{
-
+        return {
+            array:[],
         }
-    }
+    },
+    created() {
+        axios.get("https://www.breakingbadapi.com/api/characters").then((resp) => {
+            this.characters = resp.data
+            console.log(this.characters);
+            this.array.push(this.characters);
+        } )
+    },
 }
 </script>
 
 <template>
     <div class="cards flex">
-        <h1>AppCards</h1>
+        <h1>appCard</h1>
     </div>
 </template>
 
